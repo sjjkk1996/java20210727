@@ -21,5 +21,12 @@ public class Hello {
         System.out.println(foo);
         System.out.println(h1);
         System.out.println();
+        System.out.println("1" + "2");
+        System.out.println(true + "");
+        System.out.println('A'+'B');
+        System.out.println('1' + 2);
+        System.out.println('1'+'2');
+        System.out.println('J'+"ava");
+
     }
 }
