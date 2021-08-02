@@ -1,4 +1,4 @@
-package Practice;
+package Practice4and5;
 
 public class ArrayUtil {
   public static void pr2Arr(int[][] arr){

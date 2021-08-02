@@ -12,6 +12,10 @@ public class PrimitiveTypeArgs {
         //2번 메서드 호출
         change(d); //주소값을 넘겨줌
         System.out.println(d.x); //1000
+        //3번 메서드 호출
+        Data d2 = copy(d);
+        System.out.println("d2.x:" +d2.x);
+        System.out.println(d2);
     }
 
     //1번
@@ -23,6 +27,13 @@ public class PrimitiveTypeArgs {
     static void change(Data d) {
         d.x = 1000;
         System.out.printf("change() : %d %n", d.x);
+    }
+    //3번
+    static Data copy(Data d) {
+        Data tmp = new Data(); tmp.x = d.x;
+        System.out.println("d의 주소값:"+d);
+        System.out.println("tmp의 주소값:"+tmp);
+        return tmp;
     }
 }
 class Data{

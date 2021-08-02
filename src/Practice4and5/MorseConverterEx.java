@@ -1,6 +1,5 @@
-package Practice;
+package Practice4and5;
 
-import javax.swing.*;
 import java.util.Scanner;
 
 public class MorseConverterEx {
