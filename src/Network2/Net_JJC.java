@@ -48,7 +48,7 @@ public class Net_JJC {
 //                            continue;
 //                        }
 
-                    else if(chattingValue.equals("Q")||chattingValue.equals("q")) {
+                     if(chattingValue.equals("Q")||chattingValue.equals("q")) {
                         System.out.println("'Q' 또는 'q' 를 입력하여 채팅이 종료되었습니다. :)");
                         break;
                     }
