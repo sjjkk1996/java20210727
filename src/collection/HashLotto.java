@@ -1,22 +1,19 @@
 package collection;
 
-import java.util.HashSet;
-import java.util.Random;
+import java.util.*;
 
 public class HashLotto {
     public static void main(String[] args) {
-        HashSet set = new HashSet();
-        Random random = new Random();
-        int[] lot = new int[6];
-        int count = 0;
-        while(count < 6){
-            int num = 1 + random.nextInt(6);
+        Set lotto = new HashSet();
+        int num;
 
-            for (int i = 0; i < count; i++) {
-                if(lot[i] == num){
+        while(lotto.size() < 6){
+            num = (int)(Math.random()*45+1);
 
-                }
-            }
+            lotto.add(num);
         }
+        ArrayList<Integer> arr = new ArrayList<Integer>(lotto);
+
+        System.out.println("로또번호: "+arr);
     }
 }
