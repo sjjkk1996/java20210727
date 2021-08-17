@@ -1,4 +1,4 @@
-package main.network;
+package network;
 
 import java.net.*;
 import java.io.*;
@@ -8,11 +8,11 @@ public class TcpIpMultichatServer {
 	HashMap clients;
 
 	TcpIpMultichatServer() {
-		clients = new HashMap();
-		Collections.synchronizedMap(clients);
+		clients = new HashMap(); //HashMap clients;를 초기화함
+		Collections.synchronizedMap(clients); //synchronizedMap 동기화(신뢰성얻음)
 	}
 
-	public void start() {
+	public void start() { //
 		ServerSocket serverSocket = null;
 		Socket socket = null;
 

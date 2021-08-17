@@ -1,16 +1,41 @@
 package network;
 
+import swing.BasicFrm;
+
 import javax.swing.*;
-import java.io.*;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
 import java.net.Socket;
 
-public class TcpIpMultichatClient {
+public class TcpIpMultichatClientForm extends BasicFrm {
+    JTextArea ta;
+    JScrollPane scp;
+    JTextField tf;
+    public TcpIpMultichatClientForm() {
+        super(300, 600, "채팅창");
+    }
+
+    @Override
+    public void init() {
+        ta = new JTextArea();
+        scp = new JScrollPane();
+        tf = new JTextField();
+    }
+
+    @Override
+    public void arrange() {
+        add(scp, "Center");
+        add(tf, "South");
+    }
+
     public static void main(String[] args) {
         String nickName = JOptionPane.showInputDialog("채팅할 대화명을 입력하세요!");
         String ip = JOptionPane.showInputDialog("서버 IP를 입력하세요");
         try {
             Socket socket = new Socket(ip, 7777);
             System.out.println("서버에 접속되었습니다.");
+            new TcpIpMultichatClientForm();
             Sender sender = new Sender(socket, nickName);
             sender.start();
             Receiver receiver = new Receiver(socket);
