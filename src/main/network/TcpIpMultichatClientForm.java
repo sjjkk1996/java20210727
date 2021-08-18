@@ -23,6 +23,7 @@ public class TcpIpMultichatClientForm extends BasicFrm {
         ta = new JTextArea();
         scp = new JScrollPane(ta);
         tf = new JTextField();
+
     }
 
     @Override
@@ -38,8 +39,8 @@ public class TcpIpMultichatClientForm extends BasicFrm {
             Socket socket = new Socket(ip, 7777);
             System.out.println("서버에 접속되었습니다.");
             TcpIpMultichatClientForm tcp = new TcpIpMultichatClientForm();
-            //Sender sender = new Sender(socket, nickName);
-            //sender.start();
+//            Sender sender = new Sender(socket, nickName);
+//            sender.start();
             Receiver receiver = tcp.new Receiver(socket);
             receiver.start();
         } catch (IOException e) {
